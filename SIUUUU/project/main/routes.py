@@ -8,3 +8,8 @@ from flask import Blueprint, render_template
 def presentation():
 	
 	return render_template("presentation.html")
+
+@main.route('/about')
+def about():
+	
+	return render_template("about.html")
