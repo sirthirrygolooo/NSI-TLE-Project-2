@@ -14,13 +14,9 @@ def about():
 	
 	return render_template("about.html")
 
-@main.route('/login')
+@main.route('/login', methods=['GET', 'POST'])
 def login():
+	data = request.form
+	print(data)
 	
 	return render_template("login.html")
-
-@main.route('/sqr', methods=['GET'])
-def getSqr():
-	num1 = str(request.args.get('num1'))
-    
-	return f"Square of {num1} is {num1}"

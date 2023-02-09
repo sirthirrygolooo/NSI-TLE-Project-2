@@ -136,3 +136,19 @@ input::-moz-focus-inner {
   color: #8585868e;
   font-size: smaller;
 }
+
+button {
+  background: #2D2F36;
+  border: 0;
+  border-radius: 4px;
+  color: #F1F1F2;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  outline: none !important;
+  text-transform: uppercase;
+  width: 100%;
+}
