@@ -14,6 +14,10 @@ python run.py
 Then go on `http://127.0.0.1:5000` in your browser 
 
 
+Didn't make yet a `requirements.txt` file so  you probably need to install some libs
+
+Project dev tested with `Python 3.11.0`
+
 <br>
 <br>
 <br>
