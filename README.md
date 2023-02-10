@@ -1,8 +1,17 @@
-# NSI-TlLE-Project-2
+# NSI-TLE-Project-2
  Vote webapp based on blockchain
 
 
 👷‍♂️🚧 Actually in development 
+
+## How to run
+
+Launch the run.py file
+```
+python run.py
+```
+
+Then go on `http://127.0.0.1:5000` in your browser 
 
 
 <br>
