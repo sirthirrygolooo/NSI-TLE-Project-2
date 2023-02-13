@@ -1,8 +1,8 @@
 from flask import Blueprint,request
+from flask import Blueprint, render_template
 
 main = Blueprint('main', __name__)
 
-from flask import Blueprint, render_template
 
 @main.route('/')
 def presentation():
@@ -16,7 +16,15 @@ def about():
 
 @main.route('/login', methods=['GET', 'POST'])
 def login():
-	data = request.form
-	print(data)
-	
+	name = request.form.getlist('name')
+	fname = request.form.getlist('fname')
+	print(f'Nom : {name}\nPrénom: {fname}')
+
 	return render_template("login.html")
+
+@main.route('/home' , methods=['GET', 'POST'])
+def home():
+	name = request.form.getlist('name')
+	fname = request.form.getlist('fname')
+
+	return "name: ",name,"fname: ",fname
