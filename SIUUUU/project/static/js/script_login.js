@@ -47,3 +47,24 @@ document.querySelector('#submit').addEventListener('focus', function(e) {
     }
   });
 });
+
+// redirection after the post request
+function redirect() {
+  window.location.replace("./about");
+}
+
+if (document.getElementById("login-form")) {
+  document.getElementById("login-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    var form = document.getElementById("login-form");
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/login", true);
+    xhr.onload = function() {
+      if (this.status == 200) {
+        redirect();
+      }
+    };
+    xhr.send(data);
+  });
+}
