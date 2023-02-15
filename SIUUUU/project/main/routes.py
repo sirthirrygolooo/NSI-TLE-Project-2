@@ -1,5 +1,4 @@
-from flask import Blueprint,request
-from flask import Blueprint, render_template
+from flask import Blueprint,request, render_template, redirect, url_for
 
 main = Blueprint('main', __name__)
 
@@ -30,13 +29,13 @@ def login():
 		data.append(name)
 		data.append(fname)
 		logged_in = True
+		return redirect(url_for("main.dashboard", name=name[0].title, fname=fname[0]))
 		
 	return render_template("login.html")
 
-@main.route('/dashboard')
-def dashboard():
-	
-	return ('This is the dashboard')
+@main.route('/dashboard/<string:name>/<string:fname>')
+def dashboard(name, fname):
+	return (f'This is the dashboard {name} {fname}')
 
 @main.route('/test')
 def test(datas):
