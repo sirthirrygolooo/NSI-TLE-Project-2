@@ -1,5 +1,5 @@
 from flask import Blueprint,request, render_template, redirect, url_for
-from project.main.datas import get_candidats,candidats
+from datas import get_candidats,candidats
 
 
 main = Blueprint('main', __name__)

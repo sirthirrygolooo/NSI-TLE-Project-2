@@ -1,19 +1,27 @@
 candidats = [
     {
     'candidat': 'Jean Clanche',
-    'parti': 'PS',
+    'parti': 'Clancheurs',
     'vote': 0
     },
     {
-    'candidat': 'benoit jspquoi',
-    'parti': 'PS',
-    'vote': 0
+    'candidat': 'SIUUUU REU',
+    'parti': 'SHEEESH',
+    'vote': 0,
+    'image' : ''
     },
     {
     'candidat': 'tabar lis',
-    'parti': 'PS',
-    'vote': 0
-    }
+    'parti': 'En Nage',
+    'vote': 0,
+    'image' : ''
+    },
+    {
+    'candidat': 'Marine LeStylo',
+    'parti': 'Rassemblement de la Nation ',
+    'vote': 0,
+    'image' : ''
+    },
 ]
 
 def get_candidats(candidats):
@@ -24,7 +32,8 @@ def get_candidats(candidats):
             candidats.append({
                 'candidat': 'Candidat '+str(i+1),
                 'parti': 'Inconnu',
-                'vote': 0
+                'vote': 0,
+                'image' : ''
             })
         return candidats
     elif len(candidats) < 6 :
@@ -32,7 +41,8 @@ def get_candidats(candidats):
             candidats.append({
                 'candidat': 'Candidat '+str((6-len(candidats))+2*i+1),
                 'parti': 'Inconnu',
-                'vote': 0
+                'vote': 0,
+                'image' : ''
             })
         return candidats
     else :
