@@ -102,6 +102,7 @@ body {
 }
 
 .sidebar ul > li.has-dropdown > a:after {
+	rotate: -90deg;
 	content: '\eb3a';
 	font-family: unicons-line;
 	font-size: 1rem;
@@ -112,7 +113,7 @@ body {
 }
 
 .sidebar ul .opened > a:after {
-	transform: rotate(-90deg);
+	transform: rotate(90deg);
 }
 
 /* Start dropdown menu */
