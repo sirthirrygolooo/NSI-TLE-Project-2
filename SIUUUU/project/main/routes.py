@@ -1,5 +1,5 @@
 from flask import Blueprint,request, render_template, redirect, url_for
-from datas import get_candidats,candidats
+from datas import *
 
 
 main = Blueprint('main', __name__)
@@ -38,7 +38,8 @@ def login():
 def dashboard(name, fname):
 	# return (f'This is the dashboard of {data[1]} {data[0]}',print(data[0]))
 	get_cand = get_candidats(candidats)
-	return render_template("index.html", posts=data, candidats=get_cand,name=name,fname=fname)
+	get_st = get_stats(candidats)
+	return render_template("index.html", posts=data, candidats=get_cand,name=name,fname=fname,stats=get_st)
 
 @main.route('/test')
 def test(datas):

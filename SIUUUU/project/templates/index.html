@@ -126,9 +126,9 @@
             <i class="uil-envelope-shield fs-2 text-center bg-primary rounded-circle"></i>
             <div class="ms-3">
               <div class="d-flex align-items-center">
-                <h3 class="mb-0"> siuu</h3> <span class="d-block ms-2">votes</span>
+                <h3 class="mb-0">{{ stats[0]['Total'] }}</h3> <span class="d-block ms-2">personnes</span>
               </div>
-              <p class="fs-normal mb-0">Effectués en ligne</p>
+              <p class="fs-normal mb-0">Ont déjà voté</p>
             </div>
           </div>
         </div>
@@ -137,9 +137,9 @@
             <i class="uil-users-alt fs-2 text-center bg-success rounded-circle"></i>
             <div class="ms-3">
               <div class="d-flex align-items-center">
-                <h3 class="mb-0">fill</h3> <span class="d-block ms-2">utilisateurs</span>
+                <h3 class="mb-0">{{ stats[0]['Distanciel'] }}</h3> <span class="d-block ms-2">utilisateurs</span>
               </div>
-              <p class="fs-normal mb-0">Qui nous ont déja rejoitn</p>
+              <p class="fs-normal mb-0">ont voté en ligne</p>
             </div>
           </div>
         </div>
@@ -150,13 +150,13 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="chart-container rounded-2 p-3">
-            <h3 class="fs-6 mb-3">Stats sur les votes 1</h3>
+            <h3 class="fs-6 mb-3">Graphique montrant l'évolution du pib du zimbabwe</h3>
             <canvas id="myChart"></canvas>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="chart-container rounded-2 p-3">
-            <h3 class="fs-6 mb-3">Stats sur les votes 2</h3>
+            <h3 class="fs-6 mb-3">Evolution de la taille de ma b* au cours du temps</h3>
             <canvas id="myChart2"></canvas>
           </div>
         </div>
@@ -172,7 +172,7 @@
               <div class="img">
                 <img class="img-fluid rounded-pill"
                      width="75" height="75"
-                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148906966/small/1501685402/enhance"
+                     src = "{{ candidats[0]['image'] }}"
                      alt="admin">
               </div>
               <div class="ms-3">
@@ -184,7 +184,7 @@
               <div class="img">
                 <img class="img-fluid rounded-pill"
                      width="75" height="75"
-                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907137/small/1501685404/enhance"
+                     src = "{{ candidats[1]['image'] }}"
                      alt="admin">
               </div>
               <div class="ms-3">
@@ -196,7 +196,7 @@
               <div class="img">
                 <img class="img-fluid rounded-pill"
                      width="75" height="75"
-                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907019/small/1501685403/enhance"
+                     src = "{{ candidats[2]['image'] }}"
                      alt="admin">
               </div>
               <div class="ms-3">
@@ -213,7 +213,7 @@
               <div class="img">
                 <img class="img-fluid rounded-pill"
                      width="75" height="75"
-                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907114/small/1501685404/enhance"
+                     src = "{{ candidats[3]['image'] }}"
                      alt="admin">
               </div>
               <div class="ms-3">
@@ -225,7 +225,7 @@
               <div class="img">
                 <img class="img-fluid rounded-pill"
                      width="75" height="75"
-                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907086/small/1501685404/enhance"
+                     src = "{{ candidats[4]['image'] }}"
                      alt="admin">
               </div>
               <div class="ms-3">
@@ -237,7 +237,7 @@
               <div class="img">
                 <img class="img-fluid rounded-pill"
                      width="75" height="75"
-                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+                     src = "{{ candidats[5]['image'] }}"
                      alt="admin">
               </div>
               <div class="ms-3">
@@ -255,29 +255,29 @@
         <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
           <div class="box bg-primary p-3">
             <i class="uil-eye"></i>
-            <h3>5,154</h3>
-            <p class="lead">Page views</p>
+            <h3>{{ stats[0]['Total'] }}</h3>
+            <p class="lead">Total</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
           <div class="box bg-danger p-3">
             <i class="uil-user"></i>
-            <h3>245</h3>
-            <p class="lead">User registered</p>
+            <h3>{{ stats[0]['Blanc'] }}</h3>
+            <p class="lead">Blanc</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
           <div class="box bg-warning p-3">
             <i class="uil-shopping-cart"></i>
-            <h3>5,154</h3>
-            <p class="lead">Product sales</p>
+            <h3>{{ stats[0]['Presentiel'] }}</h3>
+            <p class="lead">Présentiel </p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="box bg-success p-3">
-            <i class="uil-feedback"></i>
-            <h3>jsp %</h3>
-            <p class="lead">Satisfaction moyenne</p>
+            <i class="uil-computer"></i>
+            <h3>{{ stats[0]['Distanciel']}}</h3>
+            <p class="lead">Distanciel </p>
           </div>
         </div>
       </div>

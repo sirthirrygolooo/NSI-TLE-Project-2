@@ -1,7 +1,3 @@
-// Other important pens.
-// Map: https://codepen.io/themustafaomar/pen/ZEGJeZq
-// Navbar: https://codepen.io/themustafaomar/pen/VKbQyZ
-
 'use strict'
 
 function $(selector) {
@@ -121,18 +117,18 @@ Chart.defaults.global.maintainAspectRatio = false
 var myChart = new Chart(document.getElementById('myChart'), {
   type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", 'May', 'June', 'August', 'September'],
+    labels: ["2023", "2024", "2025", "2026", '2027', '2028'],
     datasets: [{
-      label: "Lost",
-      data: [45, 25, 40, 20, 60, 20, 35, 25],
+      label: "Presence",
+      data: [215, 198, , 150, 120, 135, 140, 98],
       backgroundColor: "#0d6efd",
       borderColor: 'transparent',
       borderWidth: 2.5,
       barPercentage: 0.4,
     }, {
-      label: "Succes",
+      label: "Distance",
       startAngle: 2,
-      data: [20, 40, 20, 50, 25, 40, 25, 10],
+      data: [500, 523, 700, 599, 610, 623, 700, 710],
       backgroundColor: "#dc3545",
       borderColor: 'transparent',
       borderWidth: 2.5,
@@ -160,28 +156,28 @@ var myChart = new Chart(document.getElementById('myChart'), {
 var chart = new Chart(document.getElementById('myChart2'), {
   type: 'line',
   data: {
-    labels: ["January", "February", "March", "April", 'May', 'June', 'August', 'September'],
+    labels: ["2023","2024","2025","2026","2027","2028","2029","2030"],
     datasets: [{
-      label: "My First dataset",
-      data: [4, 20, 5, 20, 5, 25, 9, 18],
-      backgroundColor: 'transparent',
+      label: "Moyenne pour les plus grosses",
+      data: [23, 25, 25, 25, 25, 24, 25, 25],
       borderColor: '#0d6efd',
-      lineTension: .4,
-      borderWidth: 1.5,
-    }, {
-      label: "Month",
-      data: [11, 25, 10, 25, 10, 30, 14, 23],
       backgroundColor: 'transparent',
+      lineTension: .4,
+      borderWidth: 3,
+    }, {
+      label: "La mienne",
+      data: [15, 16, 17, 18, 19, 20, 22, 26],
       borderColor: '#dc3545',
-      lineTension: .4,
-      borderWidth: 1.5,
-    }, {
-      label: "Month",
-      data: [16, 30, 16, 30, 16, 36, 21, 35],
       backgroundColor: 'transparent',
-      borderColor: '#f0ad4e',
       lineTension: .4,
-      borderWidth: 1.5,
+      borderWidth: 3,
+    }, {
+      label: "Celles de la populace",
+      data: [15, 16, 17, 16, 15, 17, 15, 16],
+      borderColor: '#f0ad4e',
+      backgroundColor: 'transparent',
+      lineTension: .4,
+      borderWidth: 3,
     }]
   },
   options: {
@@ -199,63 +195,6 @@ var chart = new Chart(document.getElementById('myChart2'), {
           display: false,
         },
       }]
-    }
-  }
-})
-
-var chart = document.getElementById('chart3');
-var myChart = new Chart(chart, {
-  type: 'line',
-  data: {
-    labels: ["One", "Two", "Three", "Four", "Five", 'Six', "Seven", "Eight"],
-    datasets: [{
-      label: "Lost",
-      lineTension: 0.2,
-      borderColor: '#d9534f',
-      borderWidth: 1.5,
-      showLine: true,
-      data: [3, 30, 16, 30, 16, 36, 21, 40, 20, 30],
-      backgroundColor: 'transparent'
-    }, {
-      label: "Lost",
-      lineTension: 0.2,
-      borderColor: '#5cb85c',
-      borderWidth: 1.5,
-      data: [6, 20, 5, 20, 5, 25, 9, 18, 20, 15],
-      backgroundColor: 'transparent'
-    },
-               {
-                 label: "Lost",
-                 lineTension: 0.2,
-                 borderColor: '#f0ad4e',
-                 borderWidth: 1.5,
-                 data: [12, 20, 15, 20, 5, 35, 10, 15, 35, 25],
-                 backgroundColor: 'transparent'
-               },
-               {
-                 label: "Lost",
-                 lineTension: 0.2,
-                 borderColor: '#337ab7',
-                 borderWidth: 1.5,
-                 data: [16, 25, 10, 25, 10, 30, 14, 23, 14, 29],
-                 backgroundColor: 'transparent'
-               }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        gridLines: {
-          drawBorder: false
-        },
-        ticks: {
-          stepSize: 12
-        }
-      }],
-      xAxes: [{
-        gridLines: {
-          display: false,
-        },
-      }],
     }
   }
 })
