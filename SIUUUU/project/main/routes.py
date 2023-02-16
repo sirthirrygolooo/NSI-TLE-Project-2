@@ -1,4 +1,6 @@
 from flask import Blueprint,request, render_template, redirect, url_for
+from project.main.datas import get_candidats,candidats
+
 
 main = Blueprint('main', __name__)
 
@@ -23,19 +25,19 @@ def about():
 @main.route('/login', methods=['GET', 'POST'])
 def login():
 	name,fname = get_infos()
-	logged_in = False
 
 	if name != [] and fname != []:
 		data.append(name)
 		data.append(fname)
-		logged_in = True
-		return redirect(url_for("main.dashboard", name=name[0].title, fname=fname[0]))
+		return redirect(url_for("main.dashboard", name=name[0], fname=fname[0]))
 		
 	return render_template("login.html")
 
-@main.route('/dashboard/<string:name>/<string:fname>')
+@main.route('/dashboard/<string:name>-<string:fname>')
 def dashboard(name, fname):
-	return (f'This is the dashboard {name} {fname}')
+	# return (f'This is the dashboard of {data[1]} {data[0]}',print(data[0]))
+	get_cand = get_candidats(candidats)
+	return render_template("index.html", posts=data, candidats=get_cand)
 
 @main.route('/test')
 def test(datas):

@@ -18,7 +18,7 @@
          alt="">
     <div class="ms-2">
       <h5 class="fs-6 mb-0">
-        <a class="text-decoration-none" href="#">{{ data.name }} {{ data.fname}}</a>
+        <a class="text-decoration-none" href="#">{{ posts[1][0] }} {{ posts[0][0] }}</a>
       </h5>
     </div>
   </div>
@@ -145,7 +145,7 @@
     <div class="welcome">
       <div class="content rounded-3 p-3">
         <h1 class="fs-3">Bienvenue !</h1>
-        <p class="mb-0">Bonjour {{ data.fname }} bienvenue sur votre espace</p>
+        <p class="mb-0">Bonjour <span class="name">{{ posts[1][0] }}</strong> bienvenue sur votre espace</p>
       </div>
     </div>
 
@@ -156,7 +156,7 @@
             <i class="uil-envelope-shield fs-2 text-center bg-primary rounded-circle"></i>
             <div class="ms-3">
               <div class="d-flex align-items-center">
-                <h3 class="mb-0">{{data.votes}}</h3> <span class="d-block ms-2">votes</span>
+                <h3 class="mb-0"> siuu</h3> <span class="d-block ms-2">votes</span>
               </div>
               <p class="fs-normal mb-0">Effectués en ligne</p>
             </div>
@@ -167,9 +167,9 @@
             <i class="uil-users-alt fs-2 text-center bg-success rounded-circle"></i>
             <div class="ms-3">
               <div class="d-flex align-items-center">
-                <h3 class="mb-0">{{data.users}}</h3> <span class="d-block ms-2">utilisateurs</span>
+                <h3 class="mb-0">fill</h3> <span class="d-block ms-2">utilisateurs</span>
               </div>
-              <p class="fs-normal mb-0">Qui nus ont déja rejoitn</p>
+              <p class="fs-normal mb-0">Qui nous ont déja rejoitn</p>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@
                      alt="admin">
               </div>
               <div class="ms-3">
-                <h3 class="fs-5 mb-1">Candidat 1</h3>
+                <h3 class="fs-5 mb-1">{{ candidats[0] }}</h3>
                 <p class="mb-0">...</p>
               </div>
             </div>
@@ -218,7 +218,7 @@
                      alt="admin">
               </div>
               <div class="ms-3">
-                <h3 class="fs-5 mb-1">Candidat 2</h3>
+                <h3 class="fs-5 mb-1">{{ candidats[1] }}</h3>
                 <p class="mb-0">toujours ...</p>
               </div>
             </div>
@@ -230,7 +230,7 @@
                      alt="admin">
               </div>
               <div class="ms-3">
-                <h3 class="fs-5 mb-1">Candidat 3</h3>
+                <h3 class="fs-5 mb-1">{{ candidats[2] }}</h3>
                 <p class="mb-0">...</p>
               </div>
             </div>
@@ -247,7 +247,7 @@
                      alt="admin">
               </div>
               <div class="ms-3">
-                <h3 class="fs-5 mb-1">Candidat 4</h3>
+                <h3 class="fs-5 mb-1">{{ candidats[3] }}</h3>
                 <p class="mb-0">...</p>
               </div>
             </div>
@@ -259,7 +259,7 @@
                      alt="admin">
               </div>
               <div class="ms-3">
-                <h3 class="fs-5 mb-1">Candidat 5</h3>
+                <h3 class="fs-5 mb-1">{{ candidats[4] }}</h3>
                 <p class="mb-0">...</p>
               </div>
             </div>
@@ -271,7 +271,7 @@
                      alt="admin">
               </div>
               <div class="ms-3">
-                <h3 class="fs-5 mb-1">Candidat 6</h3>
+                <h3 class="fs-5 mb-1">{{ candidats[5] }}</h3>
                 <p class="mb-0">...</p>
               </div>
             </div>
@@ -294,6 +294,13 @@
             <i class="uil-user"></i>
             <h3>245</h3>
             <p class="lead">User registered</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+          <div class="box bg-warning p-3">
+            <i class="uil-shopping-cart"></i>
+            <h3>5,154</h3>
+            <p class="lead">Product sales</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
