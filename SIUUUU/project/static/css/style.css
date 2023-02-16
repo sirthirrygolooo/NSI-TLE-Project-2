@@ -72,11 +72,12 @@ body {
 	font-size: .825rem;
 }
 
-.sidebar .search .form-control ~ i {
+.sidebar .form-control ~ i {
 	color: #2b2f3a;
 	right: 40px;
 	top: 22px;
 }
+
 
 .sidebar > ul > li {
 	padding: .7rem 1.75rem;
@@ -133,7 +134,7 @@ body {
 }
 
 .sidebar-dropdown a:hover {
-	color : rgba(255, 0, 0, 0.534);
+	color : #ff5507;
 }
 
 
@@ -154,9 +155,6 @@ body {
 		padding: 10px 0 10px 30px
 	}
 }
-
-
-
 
 /** --------------------------------
  -- welcome
