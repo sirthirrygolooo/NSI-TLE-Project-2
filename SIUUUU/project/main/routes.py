@@ -24,6 +24,7 @@ def about():
 
 @main.route('/login', methods=['GET', 'POST'])
 def login():
+	name,fname = [],[]
 	name,fname = get_infos()
 
 	if name != [] and fname != []:
@@ -37,7 +38,7 @@ def login():
 def dashboard(name, fname):
 	# return (f'This is the dashboard of {data[1]} {data[0]}',print(data[0]))
 	get_cand = get_candidats(candidats)
-	return render_template("index.html", posts=data, candidats=get_cand)
+	return render_template("index.html", posts=data, candidats=get_cand,name=name,fname=fname)
 
 @main.route('/test')
 def test(datas):

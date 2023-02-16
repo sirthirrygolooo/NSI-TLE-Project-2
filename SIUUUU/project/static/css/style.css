@@ -130,6 +130,11 @@ body {
 	padding: .5rem 0;
 	display: block;
 }
+
+.sidebar-dropdown a:hover {
+	color : rgba(255, 0, 0, 0.534);
+}
+
 /* End dropdown menu */
 
 .show-sidebar {
@@ -266,13 +271,9 @@ body {
 
 
 .main-color {
-	color: #ffc107
+	color: #ff5507
 }
 
-/** --------------------------------
- -- Please don't do that in real-world projects!
- -- overwrite Bootstrap variables instead.
--------------------------------- */
 
 .navbar {
 	background-color: var(--navbar-bg-color) !important;
