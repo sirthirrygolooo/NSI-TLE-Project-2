@@ -27,6 +27,13 @@ candidats = [
     'presence': 50,
     'image' : r"https://derpicdn.net/img/view/2020/1/19/2251837__safe_artist-colon-stjonal_pinkie+pie_cursed+image_good+luck+sleeping+tonight_ice+age_kill+it+with+fire_looking+at+you_nightmare+fuel_sid_sid+the+sloth_.png"
     },
+    {
+        'candidat': "Jean Neymar",
+        'parti': "La Marre",
+        'vote': 546,
+        'presence': 3,
+        'image': r"https://www.soprono.com/_uploads/groupe/15/14092_189x189.jpg"
+    }
 ]
 
 def get_candidats(candidats):
