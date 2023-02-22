@@ -6,7 +6,7 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/')
 def index():
-	return "Hello, World! This is the admin page."
+	return "Hello, World! This is the admin page click <a href='/admin/get_chain'>here</a> to get the chain"
 
 @admin.route('/mine_block', methods=['GET'])
 def mine_block():
@@ -43,5 +43,7 @@ def valid():
     else:
         response = {'message': '/!\\ Blockchain invalide /!\\'}
     return jsonify(response), 200
+
+print()
 
 blockchain = Blockchain()

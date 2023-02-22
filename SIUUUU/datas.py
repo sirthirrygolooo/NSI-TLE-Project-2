@@ -42,7 +42,7 @@ def get_candidats(candidats):
     elif candidats == []:
         for i in range(6):
             candidats.append({
-                'candidat': 'Candidat '+str(i+1),
+                'candidat': 'Candidat '+'Inconnu',
                 'parti': 'Inconnu',
                 'vote': 0,
                 'presence': 0,
@@ -52,7 +52,7 @@ def get_candidats(candidats):
     elif len(candidats) < 6 :
         for i in range(6-len(candidats)):
             candidats.append({
-                'candidat': 'Candidat '+str((6-len(candidats))+2*i+1),
+                'candidat': 'Candidat '+'Inconnu',
                 'parti': 'Inconnu',
                 'vote': 0,
                 'presence': 0,

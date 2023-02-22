@@ -1,0 +1,76 @@
+:root {
+    --background-color: #23274e;
+    --main-color : #c4c3ca;
+}
+
+body {
+    width: 100%;
+	display: block;
+	overflow-x: hidden;
+	background-color: #23274e;
+  	color: #c4c3ca;
+	font-family: 'Muli', sans-serif;
+    font-size: 3em;
+}
+
+form {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+option,select {
+    color: var(--main-color);
+    background-color: var(--background-color);
+    border: none;
+    font-size: smaller;
+}
+
+input {
+    color: var(--main-color);
+    background-color: var(--background-color);
+    border : 2px solid blueviolet;
+    border-radius: 10%;
+    position: relative;
+    top: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 50%;
+    font-size: 0.5em;
+    
+}
+
+label {
+    font-size: larger;
+}
+
+input:hover {
+    box-shadow: 0 0 20px 0 blueviolet;
+    border: none;
+    transition: 0.25s;
+}
+
+
+
+.entete {
+    text-align: center;
+}
+
+.entete p {
+    text-align: center;
+    font-size: 0.5em;
+    color: #c4c3ca;
+    margin-top: -5%;
+}
+
+.title {
+    color : blueviolet;
+}
+
+.form {
+    margin: auto;
+}

@@ -7,6 +7,8 @@ class Blockchain:
         self.chain = []
         self.create_block(proof=1, previous_hash='0')
 
+
+    # Création d'un bloc avec ses différentes infos (position, horodatage, vote, hash précédent, etc...) 
     def create_block(self, proof, previous_hash):
         block = {'index': len(self.chain) + 1,
                  'timestamp': str(datetime.datetime.now()),
@@ -16,9 +18,11 @@ class Blockchain:
         self.chain.append(block)
         return block
 
+    # pour récupérer le hash du bloc précédent
     def print_previous_block(self):
         return self.chain[-1]
  
+    # Obtient la preuve d'un bloc
     def proof_of_work(self, previous_proof):
         new_proof = 1
         check_proof = False
@@ -33,10 +37,12 @@ class Blockchain:
  
         return new_proof
  
+    # Hash un bloc en renvoie la valeur (sha-256)
     def hash(self, block):
         encoded_block = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(encoded_block).hexdigest()
  
+    # Verifie la validité de la chaine en sa basant sur le hash du bloc précédent 
     def chain_valid(self, chain):
         previous_block = chain[0]
         block_index = 1
