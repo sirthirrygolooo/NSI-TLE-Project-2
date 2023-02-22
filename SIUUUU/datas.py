@@ -79,13 +79,4 @@ def get_stats(candidats):
     stats[0]['Total'] = stats[0]['!Blanc'] + stats[0]['Blanc']
     return stats
 
-
-    
-
-    
-
-
-
-
-
-    
+voteu = ['Default']

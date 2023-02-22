@@ -1,8 +1,9 @@
 from flask import Blueprint, jsonify
 from blockch import *
-
+from datas import *
 
 admin = Blueprint('admin', __name__)
+
 
 @admin.route('/')
 def index():
@@ -16,7 +17,7 @@ def mine_block():
     previous_hash = blockchain.hash(previous_block)
     block = blockchain.create_block(proof, previous_hash)
  
-    response = {'message': 'Nouveau block mine',
+    response = {'message': 'Minage nouveau bloc',
                 'index': block['index'],
                 'timestamp': block['timestamp'],
                 'proof': block['proof'],

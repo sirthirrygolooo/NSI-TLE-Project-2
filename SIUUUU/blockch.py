@@ -12,7 +12,7 @@ class Blockchain:
     def create_block(self, proof, previous_hash):
         block = {'index': len(self.chain) + 1,
                  'timestamp': str(datetime.datetime.now()),
-                 'vote' : str(candidats[0]['candidat']),
+                 'vote' : voteu[0],
                  'proof': proof,
                  'previous_hash': previous_hash}
         self.chain.append(block)

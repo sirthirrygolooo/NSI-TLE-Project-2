@@ -1,8 +1,9 @@
-from flask import Blueprint,request, render_template, redirect, url_for
+from flask import Blueprint,request, render_template, redirect, url_for,jsonify
 from datas import *
-
+from blockch import *
 
 main = Blueprint('main', __name__)
+voteu = []
 
 def get_infos():
 	name = request.form.getlist('name')
@@ -11,6 +12,7 @@ def get_infos():
 	return name,fname
 
 data = []
+vote = []
 
 @main.route('/')
 def presentation():
@@ -49,10 +51,37 @@ def vote():
 	get_cand = get_candidats(candidats)
 
 	if vote != [] :
-		return(f'Vous avez voté {get_candidats(candidats)[int(vote[0])]["candidat"]}')
+		# return(f'Vous avez voté {get_candidats(candidats)[int(vote[0])]["candidat"]}')
+		voted = True
+		voteu.append(get_candidats(candidats)[int(vote[0])]["candidat"])
+		return redirect(url_for("main.mine_block", has_voted=voted,vote=get_candidats(candidats)[int(vote[0])]["candidat"]))
 
 	return render_template("vote.html", candidats=get_cand)
+
+@main.route('/vote/<string:has_voted>/<string:vote>')
+def mine_block(has_voted,vote):
+	if has_voted == 'True':
+		previous_block = blockchain.print_previous_block()
+		previous_proof = previous_block['proof']
+		proof = blockchain.proof_of_work(previous_proof)
+		previous_hash = blockchain.hash(previous_block)
+		block = blockchain.create_block(proof, previous_hash)
+	
+		response = {'message': 'Minage nouveau bloc',
+					'index': block['index'],
+					'timestamp': block['timestamp'],
+					'proof': block['proof'],
+					'previous_hash': block['previous_hash'],
+					# 'vote': block['vote']
+					'vote' : vote,
+					}
+	
+		return jsonify(response), 200
+	else :
+		return redirect(url_for("main.vote"))
 
 @main.route('/test')
 def test(datas):
 	return render_template("test.html", posts=datas)
+
+blockchain = Blockchain()
