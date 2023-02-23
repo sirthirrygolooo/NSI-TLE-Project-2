@@ -1,0 +1,43 @@
+body {
+    font-family: 'Muli', sans-serif;
+	font-size: .925rem;
+    line-height: 1.5;
+    color: #c4c3ca;
+    background-color: #23274e;
+    margin-left: 5%;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.entete {
+    text-align: center;
+}
+
+.title {
+    color : blueviolet;
+}
+
+button {
+    color: #c4c3ca;
+    background-color: #23274e;
+    border: 2px solid blueviolet;
+    font-size: smaller;
+    border-radius: 5px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blueviolet;
+    color: #23274e;
+    border: 2px solid #23274e;
+    transition: 0.25s;
+}
+
+button a {
+    color: #c4c3ca;
+    text-decoration: none;
+}
