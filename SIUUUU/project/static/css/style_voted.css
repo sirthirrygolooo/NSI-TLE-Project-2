@@ -41,3 +41,38 @@ button a {
     color: #c4c3ca;
     text-decoration: none;
 }
+
+
+/* Show blockchain block */
+.row {
+    display: none;
+    background-color: azure;
+    color : #0f1338;
+    border: 2px solid #252525;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left : -4%;
+
+}
+
+.show {
+    display: block;
+}
+
+.show-row {
+    color: #c4c3ca;
+    background-color: #23274e;
+    border: 2px solid blueviolet;
+    font-size: smaller;
+    border-radius: 5px;
+    padding: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.show-row button:hover {
+    background-color: blueviolet;
+    color: #23274e;
+    transition: 0.25s;
+}

@@ -3,7 +3,6 @@ from datas import *
 from blockch import *
 
 main = Blueprint('main', __name__)
-voteu = []
 
 def get_infos():
 	name = request.form.getlist('name')
@@ -53,7 +52,6 @@ def vote():
 	if vote != [] :
 		# return(f'Vous avez voté {get_candidats(candidats)[int(vote[0])]["candidat"]}')
 		voted = True
-		voteu.append(get_candidats(candidats)[int(vote[0])]["candidat"])
 		return redirect(url_for("main.mine_block", has_voted=voted,vote=get_candidats(candidats)[int(vote[0])]["candidat"]))
 
 	return render_template("vote.html", candidats=get_cand)
@@ -77,7 +75,11 @@ def mine_block(has_voted,vote):
 					}
 
 		raw = jsonify(response)
-		return render_template('voted.html', raws=response, vote=vote, name=data[1][0], fname=data[0][0])
+
+		try :
+			return render_template('voted.html', raws=response, vote=vote, name=data[1][0], fname=data[0][0]),200
+		except :
+			return render_template('voted.html', raws=response, vote=vote, name='Anonyme', fname='Anonyme'),200
 	else :
 		return redirect(url_for("main.vote"))
 
