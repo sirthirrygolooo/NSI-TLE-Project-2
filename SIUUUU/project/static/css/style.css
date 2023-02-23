@@ -29,6 +29,27 @@ body {
 	font-size: .925rem;
 }
 
+.admin button {
+	color: #c4c3ca;
+	background-color: var(--dk-gray-600);
+	font-size: smaller;
+	border: none;
+	border-radius: 5px;
+	padding: 7px;
+	cursor: pointer;
+}
+
+.admin button:hover {
+	background-color: var(--dk-gray-700);
+	color: #23274e;
+	transition: 0.25s;
+}
+
+.admin button a {
+	color: #c4c3ca;
+	text-decoration: none;
+}
+
 #wrapper {
 	margin-left: var(--sidebar-width);
 	transition: all .3s ease-in-out;

@@ -17,8 +17,46 @@
     <button><a href="/dashboard/{{ name }}-{{ fname }}">Retour à l'accueil</a></button>
 
     <div class="raw">
+        <button class="show-row">Show row</button>
 
+        <div class="row">
+            <p>name: {{ name }}</p>
+            <p>fname: {{ fname }}</p>
+            <p>vote: {{ vote }}</p>
+        </div>
         
+
+
+        <style>
+            .row {
+                display: none;
+            }
+
+            .show-row {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            .show {
+                display: block;
+            }
+        </style>
+        <script>
+            const showRow = document.querySelector('.show-row');
+            const row = document.querySelector('.row');
+
+            showRow.addEventListener('click', () => {
+                row.classList.toggle('show');
+            })
+        </script>
     </div>
 </body>
 </html>

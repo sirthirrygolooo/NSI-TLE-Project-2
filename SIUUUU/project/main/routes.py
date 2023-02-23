@@ -75,8 +75,9 @@ def mine_block(has_voted,vote):
 					# 'vote': block['vote']
 					'vote' : vote,
 					}
-	
-		return jsonify(response), 200
+
+		raw = jsonify(response)
+		return render_template('voted.html', raws=response, vote=vote, name=data[1][0], fname=data[0][0])
 	else :
 		return redirect(url_for("main.vote"))
 
