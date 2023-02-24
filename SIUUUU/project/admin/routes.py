@@ -1,15 +1,9 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify,render_template
 from blockch import *
 from datas import *
 
 admin = Blueprint('admin', __name__)
 
-
-@admin.route('/')
-def index():
-	return "Hello, World! This is the admin page click <a href='/admin/get_chain'>here</a> to get the chain"
-
-@admin.route('/mine_block', methods=['GET'])
 def mine_block(vote):
     previous_block = blockchain.print_previous_block()
     previous_proof = previous_block['proof']
@@ -25,7 +19,13 @@ def mine_block(vote):
                 'vote': vote
                 }
  
-    return jsonify(response), 200, response
+    return 200, response
+
+@admin.route('/')
+def index():
+        
+	return render_template("index.html")
+
 
  
 @admin.route('/get_chain', methods=['GET'])

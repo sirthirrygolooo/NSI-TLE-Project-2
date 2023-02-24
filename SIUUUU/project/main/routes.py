@@ -60,7 +60,7 @@ def vote():
 @main.route('/vote/<string:has_voted>/<string:vote>')
 def vote_block(has_voted,vote):
 	if has_voted == 'True':
-		ack,code,response = mine_block(vote)
+		code,response = mine_block(vote)
 
 		if code == 200:
 			try :
