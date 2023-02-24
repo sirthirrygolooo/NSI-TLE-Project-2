@@ -5,16 +5,17 @@ class Blockchain:
 
     def __init__(self):
         self.chain = []
-        self.create_block(proof=1, previous_hash='0')
+        self.create_block(proof=1, previous_hash='0',vote='Default')
 
 
     # Création d'un bloc avec ses différentes infos (position, horodatage, vote, hash précédent, etc...) 
-    def create_block(self, proof, previous_hash):
+    def create_block(self, proof, previous_hash,vote):
         block = {'index': len(self.chain) + 1,
                  'timestamp': str(datetime.datetime.now()),
-                 'vote' : voteu[0],
                  'proof': proof,
-                 'previous_hash': previous_hash}
+                 'vote' : vote,
+                 'previous_hash': previous_hash
+                }
         self.chain.append(block)
         return block
 
@@ -22,7 +23,7 @@ class Blockchain:
     def print_previous_block(self):
         return self.chain[-1]
  
-    # Obtient la preuve d'un bloc
+    # Obtient la signature d'un bloc
     def proof_of_work(self, previous_proof):
         new_proof = 1
         check_proof = False

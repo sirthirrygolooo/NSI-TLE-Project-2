@@ -1,6 +1,7 @@
 from flask import Blueprint,request, render_template, redirect, url_for,jsonify
 from datas import *
 from blockch import *
+from project.admin.routes import *
 
 main = Blueprint('main', __name__)
 
@@ -52,39 +53,23 @@ def vote():
 	if vote != [] :
 		# return(f'Vous avez voté {get_candidats(candidats)[int(vote[0])]["candidat"]}')
 		voted = True
-		return redirect(url_for("main.mine_block", has_voted=voted,vote=get_candidats(candidats)[int(vote[0])]["candidat"]))
+		return redirect(url_for("main.vote_block", has_voted=voted,vote=get_candidats(candidats)[int(vote[0])]["candidat"]))
 
 	return render_template("vote.html", candidats=get_cand)
 
 @main.route('/vote/<string:has_voted>/<string:vote>')
-def mine_block(has_voted,vote):
+def vote_block(has_voted,vote):
 	if has_voted == 'True':
-		previous_block = blockchain.print_previous_block()
-		previous_proof = previous_block['proof']
-		proof = blockchain.proof_of_work(previous_proof)
-		previous_hash = blockchain.hash(previous_block)
-		block = blockchain.create_block(proof, previous_hash)
-	
-		response = {'message': 'Minage nouveau bloc',
-					'index': block['index'],
-					'timestamp': block['timestamp'],
-					'proof': block['proof'],
-					'previous_hash': block['previous_hash'],
-					# 'vote': block['vote']
-					'vote' : vote,
-					}
+		ack,code,response = mine_block(vote)
 
-		raw = jsonify(response)
-
-		try :
-			return render_template('voted.html', raws=response, vote=vote, name=data[1][0], fname=data[0][0]),200
-		except :
-			return render_template('voted.html', raws=response, vote=vote, name='Anonyme', fname='Anonyme'),200
+		if code == 200:
+			try :
+				return render_template('voted.html', raws=response, vote=vote, name=data[1][0], fname=data[0][0])
+			except :
+				return render_template('voted.html', raws=response, vote=vote, name='Anonyme', fname='Anonyme')
+		else :
+			return(f'Erreur !\nCode retourné : {code}')
 	else :
 		return redirect(url_for("main.vote"))
-
-@main.route('/test')
-def test(datas):
-	return render_template("test.html", posts=datas)
 
 blockchain = Blockchain()

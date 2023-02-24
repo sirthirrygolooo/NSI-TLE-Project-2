@@ -1,13 +1,16 @@
 from project import app
 
-
 try :
 	import flask
+	print('flask ok')
 	import hashlib
+	print('hashlib ok')
 except ImportError:
 	print('Libs non installées')
+	print('Installation des libs...')
 	import os
 	os.system('pip install requirements.txt')
+	os.system('pause')
 
 
 
