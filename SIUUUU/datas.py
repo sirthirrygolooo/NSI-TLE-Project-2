@@ -22,7 +22,7 @@ candidats = [
     },
     {
     'candidat': 'Marine LeStylo',
-    'parti': 'Rassemblement de la Nation ',
+    'parti': 'Rassemblement de la Nation Crayonnesque',
     'vote': 320,
     'presence': 50,
     'image' : r"https://derpicdn.net/img/view/2020/1/19/2251837__safe_artist-colon-stjonal_pinkie+pie_cursed+image_good+luck+sleeping+tonight_ice+age_kill+it+with+fire_looking+at+you_nightmare+fuel_sid_sid+the+sloth_.png"
