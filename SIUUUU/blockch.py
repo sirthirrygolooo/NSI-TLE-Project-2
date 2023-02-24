@@ -4,7 +4,9 @@ from datas import *
 class Blockchain:
 
     def __init__(self):
+        # Création de la chaine de blocs
         self.chain = []
+        # Création du bloc genesis
         self.create_block(proof=1, previous_hash='0',vote='Default')
 
 
@@ -43,7 +45,7 @@ class Blockchain:
         encoded_block = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(encoded_block).hexdigest()
  
-    # Verifie la validité de la chaine en sa basant sur le hash du bloc précédent 
+    # Verifie la validité de la chaine en sa basant sur le hash du bloc précédent et a signature du bloc (proof)
     def chain_valid(self, chain):
         previous_block = chain[0]
         block_index = 1
