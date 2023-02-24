@@ -158,21 +158,21 @@ var chart = new Chart(document.getElementById('myChart2'), {
   data: {
     labels: ["2023","2024","2025","2026","2027","2028","2029","2030"],
     datasets: [{
-      label: "Moyenne pour les plus grosses",
+      label: "Moyenne",
       data: [23, 25, 25, 25, 25, 24, 25, 25],
       borderColor: '#0d6efd',
       backgroundColor: 'transparent',
       lineTension: .4,
       borderWidth: 3,
     }, {
-      label: "La mienne",
+      label: "On a pas assez de datas ToT",
       data: [15, 16, 17, 18, 19, 20, 22, 26],
       borderColor: '#dc3545',
       backgroundColor: 'transparent',
       lineTension: .4,
       borderWidth: 3,
     }, {
-      label: "Celles de la populace",
+      label: "jsp",
       data: [15, 16, 17, 16, 15, 17, 15, 16],
       borderColor: '#f0ad4e',
       backgroundColor: 'transparent',
