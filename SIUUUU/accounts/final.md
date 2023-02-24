@@ -27,6 +27,8 @@ Aroborescence du projet
 │   │   ├── routes.py
 │   ├── static
 │   │   ├── css
+│   │   │   ├── admin
+│   │   │   │   ├── style.css
 │   │   │   ├── style_about.css
 │   │   │   ├── style_login.css
 │   │   │   ├── style_para.css
@@ -39,6 +41,8 @@ Aroborescence du projet
 │   │   │   ├── script_para.js
 │   │   |   ├── script.js
 │   ├── templates
+│   │   ├── admin
+│   │   │   ├── index.html
 │   │   ├── about.html
 │   │   ├── index.html
 │   │   ├── login.html
@@ -48,7 +52,6 @@ Aroborescence du projet
 │   ├── __init__.py
 │   ├── config.py
 |
-├── requirements.txt
 ├── blockch.py
 ├── datas.py
 ├── run.py
