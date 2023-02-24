@@ -200,25 +200,11 @@ else :
     return candidats
 ```
 
-## Notre travail
-
-### Arthur
-
-> *A compléter*
-
-### Louis
-
->*A compléter*
-
-### J-B
-
->*A compléter*
-
 <br>
 
 ### Répartition et méthodes
 
-Nous avons beaucoup travaillé par discord et github avançant chacun sur certaines pages avant de les mettre en commun pour les rendre cohérentes entre elles. Pour les parties plus complexe comme l'algo relative à la blockchain, c'était surtout un travail en commun entre Louis et moi et nous expliquions ensuite le fonctionnement et l'intérêt de chaque partie à Arthur. La difficulté principale était quand à elle de relier les différentes parties front et back entre elles et de faire que lorsque on vote, cela vient s'ajouter chaine qui est ensuite analysable depuis un autre endroit, etc...
+Nous avons beaucoup travaillé par discord et github avançant chacun sur certaines pages avant de les mettre en commun pour les rendre cohérentes entre elles. Pour les parties plus complexe comme l'algo relative à la blockchain, c'était surtout un travail en commun entre Louis et moi et nous expliquions ensuite le fonctionnement et l'intérêt de chaque partie à Arthur. Pour le reste, c'était variable car cela dépednait du besoin des différentes pages. La difficulté principale était quand à elle de relier les différentes parties front et back entre elles et de faire que lorsque on vote, cela vient s'ajouter chaine qui est ensuite analysable depuis un autre endroit, etc...
 
 
 <!-- CSS -->
