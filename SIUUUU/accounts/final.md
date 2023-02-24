@@ -211,10 +211,11 @@ else :
 
 >*A compléter*
 
-***
+<br>
 
+### Répartition et méthodes
 
-
+Nous avons beaucoup travaillé par discord et github avançant chacun sur certaines pages avant de les mettre en commun pour les rendre cohérentes entre elles. Pour les parties plus complexe comme l'algo relative à la blockchain, c'était surtout un travail en commun entre Louis et moi et nous expliquions ensuite le fonctionnement et l'intérêt de chaque partie à Arthur. La difficulté principale était quand à elle de relier les différentes parties front et back entre elles et de faire que lorsque on vote, cela vient s'ajouter chaine qui est ensuite analysable depuis un autre endroit, etc...
 
 
 <!-- CSS -->
@@ -225,4 +226,13 @@ body {
     background-color: #252525;
 }
 
+h1 {
+    color: #fff;
+    text-decoration: underline;
+}
+
+h2 {
+    color: #fff;
+    text-decoration: underline;
+}
 </style>
