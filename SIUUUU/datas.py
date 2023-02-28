@@ -1,31 +1,31 @@
 candidats = [
     {
-    'candidat': 'Jean Clanche',
-    'parti': 'Clancheurs',
-    'vote': 436,
-    'presence': 110,
-    'image' : r"https://download.vikidia.org/vikidia/fr/images/thumb/4/47/T%C3%AAte_d'ornithorynque.jpg/166px-T%C3%AAte_d'ornithorynque.jpg"
+        'candidat': 'Jean Clanche',
+        'parti': 'Clancheurs',
+        'vote': 436,
+        'presence': 110,
+        'image': r"https://download.vikidia.org/vikidia/fr/images/thumb/4/47/T%C3%AAte_d'ornithorynque.jpg/166px-T%C3%AAte_d'ornithorynque.jpg"
     },
     {
-    'candidat': 'SIUUUU REU',
-    'parti': 'SHEEESH',
-    'vote': 526,
-    'presence': 341,
-    'image' : r"http://apluche.com/image/peluches-d-eau/1960-ornithorynque__deponia_.jpg"
+        'candidat': 'SIUUUU REU',
+        'parti': 'SHEEESH',
+        'vote': 526,
+        'presence': 341,
+        'image': r"http://apluche.com/image/peluches-d-eau/1960-ornithorynque__deponia_.jpg"
     },
     {
-    'candidat': 'tabar lis',
-    'parti': 'En Nage',
-    'vote': 659,
-    'presence': 76,
-    'image' : r"http://jessleo.j.e.pic.centerblog.net/b45c8683.png"
+        'candidat': 'tabar lis',
+        'parti': 'En Nage',
+        'vote': 659,
+        'presence': 76,
+        'image': r"http://jessleo.j.e.pic.centerblog.net/b45c8683.png"
     },
     {
-    'candidat': 'Marine LeStylo',
-    'parti': 'Rassemblement de la Nation Crayonnesque',
-    'vote': 320,
-    'presence': 50,
-    'image' : r"https://derpicdn.net/img/view/2020/1/19/2251837__safe_artist-colon-stjonal_pinkie+pie_cursed+image_good+luck+sleeping+tonight_ice+age_kill+it+with+fire_looking+at+you_nightmare+fuel_sid_sid+the+sloth_.png"
+        'candidat': 'Marine LeStylo',
+        'parti': 'Rassemblement de la Nation Crayonnesque',
+        'vote': 320,
+        'presence': 50,
+        'image': r"https://derpicdn.net/img/view/2020/1/19/2251837__safe_artist-colon-stjonal_pinkie+pie_cursed+image_good+luck+sleeping+tonight_ice+age_kill+it+with+fire_looking+at+you_nightmare+fuel_sid_sid+the+sloth_.png"
     },
     {
         'candidat': "Jean Neymar",
@@ -36,8 +36,9 @@ candidats = [
     }
 ]
 
+
 def get_candidats(candidats):
-    if len(candidats) > 6 :
+    if len(candidats) > 6:
         return candidats[:6]
     elif candidats == []:
         for i in range(6):
@@ -46,20 +47,20 @@ def get_candidats(candidats):
                 'parti': 'Inconnu',
                 'vote': 0,
                 'presence': 0,
-                'image' : r"http://getdrawings.com/free-icon-bw/anonymous-avatar-icon-19.png"
+                'image': r"http://getdrawings.com/free-icon-bw/anonymous-avatar-icon-19.png"
             })
         return candidats
-    elif len(candidats) < 6 :
+    elif len(candidats) < 6:
         for i in range(6-len(candidats)):
             candidats.append({
                 'candidat': 'Candidat '+'Inconnu',
                 'parti': 'Inconnu',
                 'vote': 0,
                 'presence': 0,
-                'image' : r"http://getdrawings.com/free-icon-bw/anonymous-avatar-icon-19.png"
+                'image': r"http://getdrawings.com/free-icon-bw/anonymous-avatar-icon-19.png"
             })
         return candidats
-    else :
+    else:
         return candidats
 
 
@@ -78,5 +79,6 @@ def get_stats(candidats):
 
     stats[0]['Total'] = stats[0]['!Blanc'] + stats[0]['Blanc']
     return stats
+
 
 vote = get_stats(candidats)

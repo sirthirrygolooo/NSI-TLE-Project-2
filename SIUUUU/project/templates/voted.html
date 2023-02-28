@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_voted.css') }}">
     <title>Merci pour votre avis !</title>
 </head>
+
 <body>
     <div class="entete">
         <h1><span class="title">E-</span>VOTE</h1>
@@ -21,15 +23,15 @@
 
         <div class="row">
             <p>{<br>
-                'message': '{{  raws['message'] }}',<br>
-                'index': {{  raws['index'] }},<br>
-                'timestamp': '{{  raws['timestamp'] }}',<br>
-                'proof': {{  raws['proof'] }},<br>
-                'previous_hash': '{{  raws['previous_hash'] }}',<br>
-                'vote' : '{{  raws['vote'] }}',<br>
-            }</p>
+                'message': '{{ raws['message'] }}',<br>
+                'index': {{ raws['index'] }},<br>
+                'timestamp': '{{ raws['timestamp'] }}',<br>
+                'proof': {{ raws['proof'] }},<br>
+                'previous_hash': '{{ raws['previous_hash'] }}',<br>
+                'vote' : '{{ raws['vote'] }}',<br>
+                }</p>
         </div>
-        
+
         <script>
             const showRow = document.querySelector('.show-row');
             const row = document.querySelector('.row');
@@ -46,4 +48,5 @@
         </script>
     </div>
 </body>
+
 </html>

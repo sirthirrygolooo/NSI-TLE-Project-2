@@ -46,7 +46,7 @@ $('.sidebar .categories').addEventListener('click', function (event) {
 
   const item = event.target.closest('.has-dropdown')
 
-  if (! item) {
+  if (!item) {
     return
   }
 
@@ -156,7 +156,7 @@ var myChart = new Chart(document.getElementById('myChart'), {
 var chart = new Chart(document.getElementById('myChart2'), {
   type: 'line',
   data: {
-    labels: ["2023","2024","2025","2026","2027","2028","2029","2030"],
+    labels: ["2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030"],
     datasets: [{
       label: "Moyenne",
       data: [23, 25, 25, 25, 25, 24, 25, 25],
