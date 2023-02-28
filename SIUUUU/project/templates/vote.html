@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,29 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_vote.css') }}">
     <title>Votez !</title>
 </head>
+
 <body>
     <div class="entete">
         <h1><span class="title">E-</span>VOTE</h1>
         <p>Votre plateforme de vote en ligne</p>
     </div>
     <!-- Choisir un candidat -->
-<form action="vote" method="post">
-    <div class="form">
-        <label for="vote">Choisir un candidat : </label>
-        <select name="vote" id="vote">
-            <option value="0">{{ candidats[0]['candidat'] }}</option>
-            <option value="1">{{ candidats[1]['candidat'] }}</option>
-            <option value="2">{{ candidats[2]['candidat'] }}</option>
-            <option value="3">{{ candidats[3]['candidat'] }}</option>
-            <option value="4">{{ candidats[4]['candidat'] }}</option>
-            <option value="5">{{ candidats[5]['candidat'] }}</option>
-        </select>
-        <br>
-        <input type="submit" id="submit" value="Valider">
-    </div>
-</form>
-   
+    <form action="vote" method="post">
+        <div class="form">
+            <label for="vote">Choisir un candidat : </label>
+            <select name="vote" id="vote">
+                <option value="0">{{ candidats[0]['candidat'] }}</option>
+                <option value="1">{{ candidats[1]['candidat'] }}</option>
+                <option value="2">{{ candidats[2]['candidat'] }}</option>
+                <option value="3">{{ candidats[3]['candidat'] }}</option>
+                <option value="4">{{ candidats[4]['candidat'] }}</option>
+                <option value="5">{{ candidats[5]['candidat'] }}</option>
+            </select>
+            <br>
+            <input type="submit" id="submit" value="Valider">
+        </div>
+    </form>
+
 </body>
+
 </html>
