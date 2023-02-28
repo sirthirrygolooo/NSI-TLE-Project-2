@@ -1,6 +1,6 @@
 body {
     font-family: 'Muli', sans-serif;
-	font-size: .925rem;
+    font-size: .925rem;
     line-height: 1.5;
     color: #c4c3ca;
     background-color: #23274e;
@@ -17,7 +17,7 @@ h1 {
 }
 
 .title {
-    color : blueviolet;
+    color: blueviolet;
 }
 
 button {
@@ -47,12 +47,12 @@ button a {
 .row {
     display: none;
     background-color: azure;
-    color : #0f1338;
+    color: #0f1338;
     border: 2px solid #252525;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
-    margin-left : -4%;
+    margin-left: -4%;
 
 }
 
