@@ -1,15 +1,15 @@
 :root {
     --background-color: #23274e;
-    --main-color : #c4c3ca;
+    --main-color: #c4c3ca;
 }
 
 body {
     width: 100%;
-	display: block;
-	overflow-x: hidden;
-	background-color: #23274e;
-  	color: #c4c3ca;
-	font-family: 'Muli', sans-serif;
+    display: block;
+    overflow-x: hidden;
+    background-color: #23274e;
+    color: #c4c3ca;
+    font-family: 'Muli', sans-serif;
     font-size: 3em;
 }
 
@@ -23,7 +23,8 @@ form {
     margin-top: 10%;
 }
 
-option,select {
+option,
+select {
     color: var(--main-color);
     background-color: var(--background-color);
     border: none;
@@ -33,7 +34,7 @@ option,select {
 input {
     color: var(--main-color);
     background-color: var(--background-color);
-    border : 2px solid blueviolet;
+    border: 2px solid blueviolet;
     border-radius: 10%;
     position: relative;
     top: 10px;
@@ -41,7 +42,7 @@ input {
     text-align: center;
     margin-left: 50%;
     font-size: 0.5em;
-    
+
 }
 
 label {
@@ -68,7 +69,7 @@ input:hover {
 }
 
 .title {
-    color : blueviolet;
+    color: blueviolet;
 }
 
 .form {

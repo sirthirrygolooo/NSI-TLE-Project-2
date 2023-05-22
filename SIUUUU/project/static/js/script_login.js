@@ -1,5 +1,5 @@
 var current = null;
-document.querySelector('#email').addEventListener('focus', function(e) {
+document.querySelector('#email').addEventListener('focus', function (e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -15,7 +15,7 @@ document.querySelector('#email').addEventListener('focus', function(e) {
     }
   });
 });
-document.querySelector('#password').addEventListener('focus', function(e) {
+document.querySelector('#password').addEventListener('focus', function (e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -31,7 +31,7 @@ document.querySelector('#password').addEventListener('focus', function(e) {
     }
   });
 });
-document.querySelector('#submit').addEventListener('focus', function(e) {
+document.querySelector('#submit').addEventListener('focus', function (e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -54,13 +54,13 @@ function redirect() {
 }
 
 if (document.getElementById("login-form")) {
-  document.getElementById("login-form").addEventListener("submit", function(e) {
+  document.getElementById("login-form").addEventListener("submit", function (e) {
     e.preventDefault();
     var form = document.getElementById("login-form");
     var data = new FormData(form);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/login", true);
-    xhr.onload = function() {
+    xhr.onload = function () {
       if (this.status == 200) {
         redirect();
       }
