@@ -1,6 +1,7 @@
 import datetime,hashlib,json
 from datas import *
 
+
 class Blockchain:
 
     def __init__(self):
